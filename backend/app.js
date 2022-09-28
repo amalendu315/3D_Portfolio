@@ -1,6 +1,6 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-import path from "path";
+// import path from "path";
 import { userRouter } from "./routes/User.js";
 
 export const app = express();
@@ -11,8 +11,8 @@ app.use(cookieParser());
 
 app.use("/api", userRouter);
 
-app.use(express.static(path.resolve("../portfolio_frontend/build")));
+// app.use(express.static(path.resolve("../portfolio_frontend/build")));
 
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve("../portfolio_frontend/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//     res.sendFile(path.resolve("../portfolio_frontend/build/index.html"));
+// });
